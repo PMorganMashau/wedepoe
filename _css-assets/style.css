@@ -1,0 +1,548 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 0;
+}
+
+header {
+    background-color: #E4002B;
+    padding: 0.9375rem 0;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 1.25rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.hero {
+    background-color: #FFC72C;
+    text-align: center;
+    padding: 5rem 1.25rem;
+    color: black;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    width: 32%;
+    display: block;
+}
+
+.card {
+    background: white;
+    border: 0.0625rem solid #ddd;
+    padding: 0.9375rem;
+    box-shadow: 2px 2px 5px #ccc;
+    text-align: center;
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #E4002B;
+}
+
+.card img {
+    width: 100%;
+    height: 9.375rem;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.card h3 {
+    margin-top: 0.625rem;
+    color: #E4002B;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.625rem 1.5625rem;
+    background-color: #E4002B;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1.25rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #E4002B;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.about-content img {
+    width: 50%;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.accordion-item {
+    border: 0.0625rem solid #ddd;
+    margin-bottom: 0.625rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    background: #f9f9f9;
+    border: none;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.125rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header:hover {
+    background: #eee;
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.accordion-body {
+    display: none;
+    padding: 1rem;
+    border-top: 0.0625rem solid #ddd;
+}
+
+.accordion-body.active {
+    display: block;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.value-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    border: 0.0625rem solid #eee;
+}
+
+.value-card h3 {
+    color: #E4002B;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem;
+}
+
+.menu-item {
+    border: 0.0625rem solid #eee;
+    padding: 0.9375rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu-item.hidden {
+    display: none;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 7.5rem;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img:hover {
+    transform: scale(1.1);
+}
+
+.price {
+    color: #E4002B;
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto 2.5rem auto;
+    padding: 0.625rem;
+    border: 0.0625rem solid #ddd;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.menu-filter-tabs, .job-filter-tabs {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+    background: #eee;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    margin: 0 0.3125rem;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.filter-btn.active {
+    background: #E4002B;
+    color: white;
+}
+
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.job-card {
+    border: 0.0625rem solid #ddd;
+    padding: 1.25rem;
+    border-radius: 5px;
+}
+
+.job-card.hidden {
+    display: none;
+}
+
+.job-location {
+    font-size: 0.875rem;
+    color: #777;
+}
+
+.job-tag {
+    display: inline-block;
+    background: #FFC72C;
+    padding: 0.3125rem 0.625rem;
+    border-radius: 3px;
+    font-size: 0.875rem;
+    margin-top: 0.625rem;
+    font-weight: bold;
+}
+
+.career-form, .enquiry-form-wrapper {
+    background: #222;
+    color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-layout {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-form-wrapper {
+    flex: 1;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    color: #E4002B;
+}
+
+.info-item {
+    margin-bottom: 1.5rem;
+}
+
+.info-item h3 {
+    margin-bottom: 0.3125rem;
+}
+
+.info-item a {
+    color: #E4002B;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 0.9375rem;
+    border: none;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-error {
+    color: #ff4d4d;
+    font-size: 0.875rem;
+    margin-bottom: 0.625rem;
+    display: none;
+}
+
+.form-success {
+    color: #4caf50;
+    font-size: 0.875rem;
+    margin-bottom: 0.625rem;
+    display: none;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.gallery-item {
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 9.375rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 5px;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.lightbox.active .lightbox-img {
+    transform: scale(1);
+}
+
+.lightbox-caption {
+    color: white;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+}
+
+.lightbox-close, .lightbox-prev, .lightbox-next {
+    position: absolute;
+    background: transparent;
+    color: white;
+    font-size: 2.5rem;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    transition: color 0.2s;
+}
+
+.lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
+    color: #E4002B;
+}
+
+.lightbox-close {
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 3rem;
+}
+
+.lightbox-prev {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-next {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.testimonial-rotator {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    min-height: 100px;
+}
+
+.testimonial {
+    display: none;
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 0.625rem;
+    font-style: normal;
+    font-weight: bold;
+    color: #E4002B;
+}
+
+.footer-social {
+    margin-bottom: 1.25rem;
+}
+
+.footer-social a {
+    color: #FFC72C;
+    text-decoration: none;
+    margin: 0 0.625rem;
+    font-weight: bold;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 3.125rem;
+}
+
+@media (max-width: 768px) {
+    .cards-wrapper {
+        flex-direction: column;
+    }
+    
+    .card-link {
+        width: 100%;
+    }
+    
+    .about-content {
+        display: block;
+    }
+
+    .about-content img {
+        width: 100%;
+        margin-bottom: 0.9375rem;
+    }
+    
+    nav li {
+        display: block;
+        margin: 0.625rem 0;
+    }
+
+    .contact-layout {
+        flex-direction: column;
+    }
+
+    .job-listings {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the KFC South Africa menu — Original Recipe buckets, Zinger burgers, Hot Wings, Twister wraps. View prices and order now.">
+    <meta name="keywords" content="KFC menu, KFC prices, Original Recipe bucket, Zinger Burger, Hot Wings, Twister wrap, order KFC">
+    <link rel="canonical" href="https://yourusername.github.io/kfc-website/menu.html">
+    <meta property="og:title" content="Menu - KFC">
+    <meta property="og:description" content="Explore the KFC South Africa menu — Original Recipe buckets, Zinger burgers, Hot Wings, Twister wraps.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/kfc-website/menu.html">
+    <meta property="og:image" content="https://yourusername.github.io/kfc-website/_images/_gallery/kfc_bucket.jpg">
+    <title>Menu - KFC</title>
+    <link rel="stylesheet" href="_css-assets/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="section-title" style="margin-top: 50px;">Featured Menu</h1>
+
+        <input type="text" id="menu-search" class="search-input" placeholder="Search the menu..." aria-label="Search menu items">
+
+        <div class="menu-filter-tabs">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="buckets">Buckets</button>
+            <button class="filter-btn" data-filter="burgers">Burgers &amp; Wraps</button>
+            <button class="filter-btn" data-filter="snacks">Snacks</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+
+            <div class="menu-item" data-category="buckets" data-title="original recipe bucket" data-caption="Original Recipe Bucket - R 149.90">
+                <img src="_images/_gallery/kfc_bucket.jpg" 
+                     srcset="_images/_gallery/kfc_bucket-small.jpg 300w, _images/_gallery/kfc_bucket.jpg 800w" 
+                     sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" 
+                     alt="KFC Original Recipe bucket with eight pieces of fried chicken"
+                     width="800" 
+                     height="600"
+                     loading="lazy">
+                <h4>Original Recipe Bucket</h4>
+                <p class="price">R 149.90</p>
+            </div>
+
+            <div class="menu-item" data-category="burgers" data-title="zinger burger" data-caption="Zinger Burger - R 45.00">
+                <img src="_images/_gallery/zinger_burger.jpg" 
+                     srcset="_images/_gallery/zinger_burger-small.jpg 300w, _images/_gallery/zinger_burger.jpg 800w" 
+                     sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" 
+                     alt="KFC Zinger Burger with spicy chicken fillet, lettuce and mayo"
+                     width="800" 
+                     height="600"
+                     loading="lazy">
+                <h4>Zinger Burger</h4>
+                <p class="price">R 45.00</p>
+            </div>
+
+            <div class="menu-item" data-category="snacks" data-title="hot wings" data-caption="Hot Wings - R 39.90">
+                <img src="_images/_gallery/hot_wings.jpeg" 
+                     srcset="_images/_gallery/hot_wings-small.jpeg 300w, _images/_gallery/hot_wings.jpeg 800w" 
+                     sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" 
+                     alt="KFC Hot Wings with spicy coating and dipping sauce"
+                     width="800" 
+                     height="600"
+                     loading="lazy">
+                <h4>Hot Wings</h4>
+                <p class="price">R 39.90</p>
+            </div>
+
+            <div class="menu-item" data-category="burgers" data-title="twister wrap" data-caption="Twister Wrap - R 55.00">
+                <img src="_images/_gallery/twister.webp" 
+                     srcset="_images/_gallery/twister-small.webp 300w, _images/_gallery/twister.webp 800w" 
+                     sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" 
+                     alt="KFC Twister Wrap with chicken strips, lettuce and tomato in a tortilla"
+                     width="800" 
+                     height="600"
+                     loading="lazy">
+                <h4>Twister Wrap</h4>
+                <p class="price">R 55.00</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close image viewer">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous image">&#10094;</button>
+        <button class="lightbox-next" aria-label="Next image">&#10095;</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://facebook.com/kfc" target="_blank" rel="noopener noreferrer" aria-label="KFC Facebook">Facebook</a>
+            <a href="https://twitter.com/kfc" target="_blank" rel="noopener noreferrer" aria-label="KFC Twitter">Twitter</a>
+            <a href="https://instagram.com/kfc" target="_blank" rel="noopener noreferrer" aria-label="KFC Instagram">Instagram</a>
+            <a href="https://youtube.com/kfc" target="_blank" rel="noopener noreferrer" aria-label="KFC YouTube">YouTube</a>
+        </div>
+        <p>&copy; 2026 KFC Project Website. All rights reserved.</p>
+    </footer>
+
+    <script src="_js/main.js"></script>
+</body>
+</html>

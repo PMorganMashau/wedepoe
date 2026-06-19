@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the KFC team. Explore available positions including Team Member, Manager, and Driver roles. Apply online today.">
+    <meta name="keywords" content="KFC jobs, KFC careers, apply KFC, fast food jobs, team member, restaurant manager">
+    <link rel="canonical" href="https://yourusername.github.io/kfc-website/careers.html">
+    <meta property="og:title" content="Careers - KFC">
+    <meta property="og:description" content="Join the KFC team. Explore available positions including Team Member, Manager, and Driver roles. Apply online today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/kfc-website/careers.html">
+    <meta property="og:image" content="https://yourusername.github.io/kfc-website/_images/_gallery/careers.jpg">
+    <title>Careers - KFC</title>
+    <link rel="stylesheet" href="_css-assets/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="section-title" style="margin-top: 50px;">Careers</h1>
+
+        <h2 class="section-subtitle">Available Positions</h2>
+        <input type="text" id="job-search" class="search-input" placeholder="Search positions..." aria-label="Search job positions">
+
+        <div class="job-listings" id="job-listings">
+
+            <div class="job-card" data-category="in-store" data-title="team member">
+                <h3>Team Member</h3>
+                <p class="job-location">In-Store &middot; All Locations</p>
+                <p>Prepare food, serve customers, and maintain a clean restaurant environment. No experience required — we train you.</p>
+                <span class="job-tag">Full-time / Part-time</span>
+            </div>
+
+            <div class="job-card" data-category="in-store" data-title="shift manager">
+                <h3>Shift Manager</h3>
+                <p class="job-location">In-Store &middot; All Locations</p>
+                <p>Lead a team during shifts, manage operations, ensure food quality and customer satisfaction standards are met.</p>
+                <span class="job-tag">Full-time</span>
+            </div>
+
+            <div class="job-card" data-category="delivery" data-title="driver">
+                <h3>Delivery Driver</h3>
+                <p class="job-location">Delivery &middot; Select Locations</p>
+                <p>Deliver orders to customers promptly and safely. Must have a valid driver's licence and reliable vehicle.</p>
+                <span class="job-tag">Part-time / Flexible</span>
+            </div>
+
+            <div class="job-card" data-category="corporate" data-title="marketing coordinator">
+                <h3>Marketing Coordinator</h3>
+                <p class="job-location">Corporate &middot; Head Office</p>
+                <p>Support marketing campaigns, manage social media content, and analyse customer engagement data.</p>
+                <span class="job-tag">Full-time</span>
+            </div>
+
+            <div class="job-card" data-category="corporate" data-title="it support specialist">
+                <h3>IT Support Specialist</h3>
+                <p class="job-location">Corporate &middot; Head Office</p>
+                <p>Provide technical support for restaurant systems, manage point-of-sale infrastructure, and troubleshoot issues.</p>
+                <span class="job-tag">Full-time</span>
+            </div>
+
+        </div>
+
+        <div class="job-filter-tabs">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="in-store">In-Store</button>
+            <button class="filter-btn" data-filter="delivery">Delivery</button>
+            <button class="filter-btn" data-filter="corporate">Corporate</button>
+        </div>
+
+        <h2 class="section-subtitle" style="margin-top: 50px;">Apply Now</h2>
+        <div class="career-form">
+            <form id="career-form" novalidate>
+                <label for="career-name">Full Name</label>
+                <input type="text" id="career-name" name="name" placeholder="Enter your name" required minlength="2" maxlength="100" pattern="[a-zA-Z\s]+">
+
+                <label for="career-email">Email</label>
+                <input type="email" id="career-email" name="email" placeholder="Enter your email" required>
+
+                <label for="career-phone">Phone Number</label>
+                <input type="tel" id="career-phone" name="phone" placeholder="e.g. 072 123 4567" required pattern="[0-9\s\-\+]{10,15}">
+
+                <label for="career-position">Position</label>
+                <select id="career-position" name="position" required>
+                    <option value="">Select a position</option>
+                    <option value="team-member">Team Member</option>
+                    <option value="shift-manager">Shift Manager</option>
+                    <option value="delivery-driver">Delivery Driver</option>
+                    <option value="marketing-coordinator">Marketing Coordinator</option>
+                    <option value="it-support">IT Support Specialist</option>
+                </select>
+
+                <label for="career-message">Why do you want to join KFC?</label>
+                <textarea id="career-message" name="message" rows="4" placeholder="Tell us about yourself..." required minlength="20" maxlength="500"></textarea>
+
+                <div class="form-error" id="career-error"></div>
+                <div class="form-success" id="career-success"></div>
+
+                <button type="submit" class="btn" style="width: 100%; margin-top: 10px; border: none; cursor: pointer;">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://facebook.com/kfc" target="_blank" rel="noopener noreferrer" aria-label="KFC Facebook">Facebook</a>
+            <a href="https://twitter.com/kfc" target="_blank" rel="noopener noreferrer" aria-label="KFC Twitter">Twitter</a>
+            <a href="https://instagram.com/kfc" target="_blank" rel="noopener noreferrer" aria-label="KFC Instagram">Instagram</a>
+            <a href="https://youtube.com/kfc" target="_blank" rel="noopener noreferrer" aria-label="KFC YouTube">YouTube</a>
+        </div>
+        <p>&copy; 2026 KFC Project Website. All rights reserved.</p>
+    </footer>
+
+    <script src="_js/main.js"></script>
+</body>
+</html>
