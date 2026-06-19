@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://PMorganMashau.github.io/wedepoe/sitemap.xml
