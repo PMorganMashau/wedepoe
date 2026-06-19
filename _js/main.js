@@ -36,19 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     var closeBtn = document.querySelector('.lightbox-close');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeLightbox);
-    }
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
 
-    if (lightboxImg) {
-        lightboxImg.addEventListener('click', closeLightbox);
-    }
+    if (lightboxImg) lightboxImg.addEventListener('click', closeLightbox);
 
     if (lightbox) {
         lightbox.addEventListener('click', function(e) {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
+            if (e.target === lightbox) closeLightbox();
         });
     }
 
@@ -79,8 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(e) {
         if (!lightbox || !lightbox.classList.contains('active')) return;
         if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') prevBtn.click();
-        if (e.key === 'ArrowRight') nextBtn.click();
+        if (e.key === 'ArrowLeft' && prevBtn) prevBtn.click();
+        if (e.key === 'ArrowRight' && nextBtn) nextBtn.click();
     });
 
     document.querySelectorAll('.accordion-header').forEach(function(header) {
@@ -151,6 +145,9 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             var errorDiv = document.getElementById(errorId);
             var successDiv = document.getElementById(successId);
+            var btn = form.querySelector('button[type="submit"]');
+            var originalBtnText = btn.textContent;
+
             errorDiv.style.display = 'none';
             successDiv.style.display = 'none';
             errorDiv.textContent = '';
@@ -170,9 +167,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 errorDiv.style.display = 'block';
                 if (firstInvalid) firstInvalid.focus();
             } else {
-                successDiv.textContent = 'Successfully submitted!';
-                successDiv.style.display = 'block';
-                form.reset();
+                btn.disabled = true;
+                btn.textContent = 'Submitting...';
+
+                fetch('https://jsonplaceholder.typicode.com/posts', {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(function(response) {
+                    if (response.ok) {
+                        successDiv.textContent = 'Successfully submitted!';
+                        successDiv.style.display = 'block';
+                        form.reset();
+                    } else {
+                        throw new Error('Server error');
+                    }
+                })
+                .catch(function() {
+                    errorDiv.textContent = 'Submission failed. Please try again.';
+                    errorDiv.style.display = 'block';
+                })
+                .finally(function() {
+                    btn.disabled = false;
+                    btn.textContent = originalBtnText;
+                });
             }
         });
     }
